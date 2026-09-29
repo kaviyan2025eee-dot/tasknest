@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskNest - Task Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>TaskNest</h1>
+        <p>Personal To-Do and Task Manager</p>
+    </header>
+
+    <main>
+
+        <!-- Add Task Section -->
+        <section class="task-form">
+
+            <h2>Add New Task</h2>
+
+            <input
+                type="text"
+                id="title"
+                placeholder="Task title"
+            >
+
+            <input
+                type="date"
+                id="dueDate"
+            >
+
+            <select id="priority">
+                <option value="LOW">Low</option>
+                <option value="MEDIUM">Medium</option>
+                <option value="HIGH">High</option>
+            </select>
+
+            <select id="taskList">
+                <option value="1">Academics</option>
+                <option value="2">Personal</option>
+            </select>
+
+            <button onclick="addTask()">
+                Add Task
+            </button>
+
+        </section>
+
+
+        <!-- Task Views -->
+        <section class="task-section">
+
+            <div class="section-header">
+                <h2>My Tasks</h2>
+
+                <div>
+                    <button onclick="loadTasks()">
+                        All
+                    </button>
+
+                    <button onclick="loadTodayTasks()">
+                        Today
+                    </button>
+
+                    <button onclick="loadOverdueTasks()">
+                        Overdue
+                    </button>
+                </div>
+            </div>
+
+
+            <div id="taskContainer">
+                <!-- Tasks will appear here -->
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
